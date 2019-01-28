@@ -30,7 +30,7 @@ server.on('connection', socket => {
     Object.entries(sockets).forEach(([key,cs]) => {
       if(socket.id == key) return;
 
-      cs.write(`${socket.name}: ${timestamp()} `);
+      cs.write(`${socket.name}:${timestamp()}:`);
       cs.write(data);
     });
   });
